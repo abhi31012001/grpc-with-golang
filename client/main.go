@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	pb "grpc/proto"
 	"log"
 	"time"
@@ -29,10 +28,7 @@ func main() {
 	//		callSayHello(client)
 	//callSayHelloServerStream(client, names)
 	//callSayHelloClientStream(client, names)
-	v := time.Now().Local()
-	for i := 0; i < 100000; i++ {
-		callSayHelloBidirectionalStream(client, names)
-	}
-	fmt.Print(v)
-	fmt.Print(time.Now().Local())
+	
+	callSayHelloBidirectionalStream(client, names)
+	
 }
